@@ -20,10 +20,9 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Deprecate versions
+      - name: Deprecate entire package
         run: |
-          VERSION=$(node -p "require('./package.json').version")
-          npm deprecate "@ana.espejo/meu-teste-npm@<$VERSION" \
-          "Deprecated. Support until v23.x.x."
+          npm deprecate "@ana.espejo/meu-teste-npm@*" \
+          "This package is deprecated. Support will be provided until v23.x.x. This package will no longer be maintained after that version. Open an issue in the GitHub repository https://github.com/totvs/po-theme-totvs."
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

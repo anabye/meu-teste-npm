@@ -1,6 +1,6 @@
 {
   "name": "@ana.espejo/meu-teste-npm",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Pacote de teste para simular depreciação",
   "main": "index.js",
   "scripts": {
